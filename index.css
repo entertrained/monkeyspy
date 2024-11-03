@@ -54,6 +54,15 @@ header p {
   font-family: var(--font-mono);
 }
 
+header a {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
 h2 {
   padding: 1rem;
   margin-top: 1rem;
