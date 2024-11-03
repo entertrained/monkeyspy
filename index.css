@@ -203,6 +203,19 @@ a:hover {
 footer {
   padding: 2rem 1rem;
   margin-bottom: 1rem;
+  max-width: 40rem;
+  margin: auto;
+  line-height: 1.4;
+}
+
+footer > hr {
+  border-top: dashed 1px var(--color-fg-lc);
+  margin: 2rem 3rem 1rem;
+}
+
+footer .made-by {
+  color: var(--color-fg-lc);
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 54rem) {
