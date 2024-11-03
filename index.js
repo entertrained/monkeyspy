@@ -34,6 +34,10 @@ const formatPercent = (num) =>
 const formatTimeAgo = (ms) => {
   const d = Math.floor(ms / MS_IN_DAY)
 
+  if (d === 0) {
+    return `<strong>today</strong>`
+  }
+
   return `<strong>${d}</strong> day${d !== 1 ? "s" : ""}  ago`
 }
 
