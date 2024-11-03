@@ -1,0 +1,16 @@
+{
+  "name": "entertrained-legal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy-dev-server": "^2.0.2",
+    "@biomejs/biome": "^1.8.3"
+  }
+}
