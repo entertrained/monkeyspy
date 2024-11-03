@@ -194,6 +194,12 @@ a:hover {
   opacity: 0.5;
 }
 
+.note {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--color-fg-lc);
+}
+
 footer {
   padding: 2rem 1rem;
   margin-bottom: 1rem;

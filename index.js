@@ -224,6 +224,7 @@ async function loadUserStats(username) {
     <h2><a href="${`https://monkeytype.com/profile/${username}`}" target="_blank">${username}</a></h2>
     ${$general}
     <h2>Top Scores:</h2>
+    <p class="note">Note: More recent results have higher contrast.</p>
     <ul id="stats">${$items}</ul>
   `
 
