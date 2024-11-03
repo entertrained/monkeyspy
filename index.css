@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Recursive&display=swap");
 
 :root {
+  color-scheme: dark;
+
   --color-bg: #15161e;
   --color-bg-lc: #1a1b26;
   --color-bg-hc: #101017;
