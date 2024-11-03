@@ -14,7 +14,14 @@ const tests = [
   ["words", "100"],
 ]
 
-const wordlists = ["english", "english_1k", "english_5k", "english_10k"]
+const wordlists = [
+  "english",
+  "english_1k",
+  "english_5k",
+  "english_10k",
+  "english_25k",
+  "english_450k",
+]
 
 const settings = [
   { punctuation: false, numbers: false },
