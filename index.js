@@ -3,8 +3,6 @@ const $username = document.getElementById("username")
 const $main = document.querySelector("main")
 let difficulty = "all" // 'normal' | 'expert' | 'master'
 
-$username.focus()
-
 const tests = [
   ["time", "15"],
   ["time", "30"],
@@ -238,4 +236,6 @@ $form.addEventListener("submit", async (e) => {
 
 if (location.hash) {
   loadUserStats(location.hash.slice(1))
+} else {
+  $username.focus()
 }
