@@ -1,3 +1,5 @@
+console.log("OK")
+
 const $form = document.getElementById("form")
 const $username = document.getElementById("username")
 const $main = document.querySelector("main")
@@ -173,7 +175,13 @@ async function loadUserStats(username) {
     }
   }
 
-  const timeSpent = formatDuration(data?.typingStats?.timeTyping * 1000 ?? 0)
+  const accountAgeRaw = Date.now() - data.addedAt
+  const accountAge = formatTimeAgo(accountAgeRaw)
+  const timeSpentRaw = data?.typingStats?.timeTyping * 1000 ?? 0
+  const timeSpent = formatDuration(timeSpentRaw)
+  const timePerDay = formatDuration(
+    timeSpentRaw / (accountAgeRaw / (1000 * 60 * 60 * 24)),
+  )
   const completedTests = formatNum(data?.typingStats?.completedTests ?? 0)
   const startedTests = formatNum(data?.typingStats?.startedTests ?? 0)
   const percentCompleted = formatPercent(
@@ -184,8 +192,9 @@ async function loadUserStats(username) {
   )
 
   const $general = `<div class="general">
-    <p>Joined ${formatTimeAgo(Date.now() - data.addedAt)}</p>
-    <p class="time">Typed for ${timeSpent}</p>
+    <p>Joined ${accountAge}</p>
+    <p class="time">Typed for ${timeSpent}.</p>
+    <p class="daily">On average, typed ${timePerDay} a day.</p>
     <p>Completed <strong>${completedTests}</strong> of <strong>${startedTests}</strong> tests (<strong>${percentCompleted}</strong>).</p>
   </div>`
 
@@ -240,6 +249,7 @@ async function loadUserStats(username) {
 
 $form.addEventListener("submit", async (e) => {
   e.preventDefault()
+  console.log("Loading...")
   const username = $username.value.trim()
   await loadUserStats(username)
   location.hash = username

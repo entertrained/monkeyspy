@@ -200,6 +200,14 @@ a:hover {
   color: var(--color-fg-lc);
 }
 
+.time {
+  margin-top: 1rem;
+}
+
+.daily {
+  margin-bottom: 1rem;
+}
+
 footer {
   padding: 2rem 1rem;
   margin-bottom: 1rem;
